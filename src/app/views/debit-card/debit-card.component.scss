@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  .form-container {
+    justify-content: center;
+  }
+  .form-container h1 {
+    text-align: center;
+    margin-top: 1em;
+  }
+.form{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    margin: 2em auto 0 auto;
+    grid-gap: 1em;
+}
+.btn-submit{
+    width: 30%;
+}
+
+@media only screen and (max-width: 600px) {
+    .form-container h1 {
+      text-align: left;
+    }
+    .form {
+      text-align: left;
+      display: block;
+      margin: 0;
+    }
+    .form input {
+      margin-top: 1em;
+    }
+    .btn-submit {
+      margin-top: 1em;
+    }
+  }

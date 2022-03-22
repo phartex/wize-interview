@@ -1,0 +1,11 @@
+<div class="form-container">
+    <h1>Form details</h1>
+  <form [formGroup]="debitForm" (ngSubmit)="submitForm()" class="form">
+    <input type="number" placeholder="Card Number" formControlName='cardNo'/>
+    <input type="text" placeholder="Card Holder" formControlName='cardHolder'/>
+    <input type="date" placeholder="Expiry Date" formControlName='expDate'/>
+    <input type="number" placeholder="CVV number" formControlName='cvvNo'/>
+
+    <button class="btn-submit">submit</button>
+  </form>
+</div>
