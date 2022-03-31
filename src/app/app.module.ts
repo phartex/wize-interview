@@ -11,6 +11,8 @@ import { environment } from 'src/environments/environment';
 import { NavBarComponent } from './views/nav-bar/nav-bar.component';
 import { CounterComponent } from './views/counter/counter.component';
 import { CounterButtonsComponent } from './views/counter-buttons/counter-buttons.component';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './views/state/counter.reducer';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { CounterButtonsComponent } from './views/counter-buttons/counter-buttons
   imports: [
     BrowserModule,
     AppRoutingModule,
+    StoreModule.forRoot({counter : counterReducer}),
     ReactiveFormsModule,
     StoreDevtoolsModule.instrument({
       logOnly: environment.production, // Restrict extension to log-only mode
